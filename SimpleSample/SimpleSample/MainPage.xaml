@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:SimpleSample"
+               xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="SimpleSample.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <local:ChartExt x:Name="ChartControl" VerticalOptions="FillAndExpand" EnableSeriesSelection="True" HorizontalOptions="FillAndExpand">
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeAxis RangePadding="Additional" EdgeLabelsVisibilityMode="AlwaysVisible">
+                </chart:DateTimeAxis>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis x:Name="YAxis"  Interval="1" Minimum="0" Maximum="13" >
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+                <chart:LineSeries x:Name="ChartSeries1" ItemsSource="{Binding LineSeriesData}" StrokeWidth="5" XBindingPath="Date" YBindingPath="YValue1" EnableTooltip="True"/>
+                <chart:LineSeries x:Name="ChartSeries2" ItemsSource="{Binding LineSeriesData}" StrokeWidth="5" XBindingPath="Date" YBindingPath="YValue2" EnableTooltip="True"/>
+                <chart:LineSeries x:Name="ChartSeries3" ItemsSource="{Binding LineSeriesData}" StrokeWidth="5" XBindingPath="Date" YBindingPath="YValue3" EnableTooltip="True"/>
+                <chart:LineSeries x:Name="ChartSeries4" ItemsSource="{Binding LineSeriesData}" StrokeWidth="5" XBindingPath="Date" YBindingPath="YValue4" EnableTooltip="True"/>
+            </chart:SfChart.Series>
+
+        </local:ChartExt>
+    </ContentPage.Content>
+    
+</ContentPage>
