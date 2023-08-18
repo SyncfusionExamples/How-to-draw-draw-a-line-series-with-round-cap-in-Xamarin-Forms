@@ -1,8 +1,10 @@
 # How to draw the line series with round cap
 
+
+
 It has been achieved by using CustomRenderer by extending the LineSegmnt. Please refer below code snippet. 
  
-**PCL:**
+## PCL
 ``` 
 public class ChartExt : SfChart 
     { 
@@ -10,7 +12,7 @@ public class ChartExt : SfChart
     } 
  ```   
  
-**Code snippet for Android [C#]:**
+## Code snippet for Android [C#]
 ```
 [assembly: ExportRenderer(typeof(ChartExt), typeof(CustomChartRenderer))] 
 namespace SimpleSample.Droid 
@@ -87,7 +89,7 @@ namespace SimpleSample.Droid
 } 
 ```
 
-**Code snippet for iOS [C#]:**
+## Code snippet for iOS [C#]
 
 ```
 [assembly: ExportRenderer(typeof(ChartExt), typeof(CustomChartRenderer))] 
@@ -146,7 +148,7 @@ namespace SimpleSample.iOS
 } 
 ```
 
-**Code snippet for UWP [C#]:**
+## Code snippet for UWP [C#]
 
 ```
 [assembly: ExportRenderer(typeof(ChartExt), typeof(CustomChartRenderer))] 
@@ -192,6 +194,6 @@ namespace SimpleSample.UWP
 ``` 
  
 
-**Screenshot:** 
+## Screenshot
   
  ![](Output.png)
